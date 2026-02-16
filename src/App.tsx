@@ -5,6 +5,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import GPACalculator from "./pages/GPACalculator";
+import CaseConverter from "./pages/CaseConverter";
+import WordCounter from "./pages/WordCounter";
+import GPAToPercentage from "./pages/GPAToPercentage";
+import PlagiarismChecker from "./pages/PlagiarismChecker";
 
 const queryClient = new QueryClient();
 
@@ -16,7 +21,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/gpa-calculator" element={<GPACalculator />} />
+          <Route path="/case-converter" element={<CaseConverter />} />
+          <Route path="/word-counter" element={<WordCounter />} />
+          <Route path="/gpa-to-percentage" element={<GPAToPercentage />} />
+          <Route path="/plagiarism-checker" element={<PlagiarismChecker />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
