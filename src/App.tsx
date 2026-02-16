@@ -10,6 +10,8 @@ import CaseConverter from "./pages/CaseConverter";
 import WordCounter from "./pages/WordCounter";
 import GPAToPercentage from "./pages/GPAToPercentage";
 import PlagiarismChecker from "./pages/PlagiarismChecker";
+import About from "./pages/About";
+import Privacy from "./pages/Privacy";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/word-counter" element={<WordCounter />} />
           <Route path="/gpa-to-percentage" element={<GPAToPercentage />} />
           <Route path="/plagiarism-checker" element={<PlagiarismChecker />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

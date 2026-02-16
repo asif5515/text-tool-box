@@ -8,9 +8,9 @@ interface ToolPageLayoutProps {
   title: string;
   metaDescription: string;
   children: ReactNode;
-  howToUse: string[];
-  benefits: string[];
-  faqs: { question: string; answer: string }[];
+  howToUse?: string[];
+  benefits?: string[];
+  faqs?: { question: string; answer: string }[];
 }
 
 const ToolPageLayout = ({ title, metaDescription, children, howToUse, benefits, faqs }: ToolPageLayoutProps) => {
@@ -40,22 +40,28 @@ const ToolPageLayout = ({ title, metaDescription, children, howToUse, benefits, 
 
           <AdPlaceholder className="mt-8" />
 
-          <section className="mt-12 grid gap-8 md:grid-cols-2">
-            <div>
-              <h2 className="font-display text-2xl font-bold text-foreground">How to Use</h2>
-              <ol className="mt-4 space-y-2 list-decimal list-inside text-muted-foreground">
-                {howToUse.map((step, i) => <li key={i}>{step}</li>)}
-              </ol>
-            </div>
-            <div>
-              <h2 className="font-display text-2xl font-bold text-foreground">Benefits</h2>
-              <ul className="mt-4 space-y-2 list-disc list-inside text-muted-foreground">
-                {benefits.map((b, i) => <li key={i}>{b}</li>)}
-              </ul>
-            </div>
-          </section>
+          {(howToUse?.length || benefits?.length) && (
+            <section className="mt-12 grid gap-8 md:grid-cols-2">
+              {howToUse?.length ? (
+                <div>
+                  <h2 className="font-display text-2xl font-bold text-foreground">How to Use</h2>
+                  <ol className="mt-4 space-y-2 list-decimal list-inside text-muted-foreground">
+                    {howToUse.map((step, i) => <li key={i}>{step}</li>)}
+                  </ol>
+                </div>
+              ) : null}
+              {benefits?.length ? (
+                <div>
+                  <h2 className="font-display text-2xl font-bold text-foreground">Benefits</h2>
+                  <ul className="mt-4 space-y-2 list-disc list-inside text-muted-foreground">
+                    {benefits.map((b, i) => <li key={i}>{b}</li>)}
+                  </ul>
+                </div>
+              ) : null}
+            </section>
+          )}
 
-          <FAQSection faqs={faqs} pageTitle={title} />
+          {faqs?.length ? <FAQSection faqs={faqs} pageTitle={title} /> : null}
         </div>
       </main>
       <Footer />
