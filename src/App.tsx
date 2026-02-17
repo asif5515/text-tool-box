@@ -12,6 +12,7 @@ import GPAToPercentage from "./pages/GPAToPercentage";
 import PlagiarismChecker from "./pages/PlagiarismChecker";
 import About from "./pages/About";
 import Privacy from "./pages/Privacy";
+import TermsOfService from "./pages/TermsOfService";
 import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
@@ -30,7 +31,8 @@ const App = () => (
           <Route path="/gpa-to-percentage" element={<GPAToPercentage />} />
           <Route path="/plagiarism-checker" element={<PlagiarismChecker />} />
           <Route path="/about" element={<About />} />
-          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/privacy-policy" element={<Privacy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
