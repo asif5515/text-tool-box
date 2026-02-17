@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# StudyHelperTools — Free Student Productivity Tools
 
 ## Project info
 
