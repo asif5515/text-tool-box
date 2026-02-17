@@ -12,6 +12,7 @@ import GPAToPercentage from "./pages/GPAToPercentage";
 import PlagiarismChecker from "./pages/PlagiarismChecker";
 import About from "./pages/About";
 import Privacy from "./pages/Privacy";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/plagiarism-checker" element={<PlagiarismChecker />} />
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
