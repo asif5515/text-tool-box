@@ -58,8 +58,8 @@ const Contact = () => {
 
   return (
     <ToolPageLayout
-      title="Contact Us"
-      metaDescription="Get in touch with the creator of StudyHelperTool. Suggest a tool, report a bug, or just say hi — every message is read personally."
+      title="Contact StudyHelperTool — Feedback, Suggestions & Support"
+      metaDescription="Have a question, tool suggestion, or found a bug? Reach out to the StudyHelperTool team — every message is read personally."
       faqs={faqs}
     >
       <div className="max-w-2xl">

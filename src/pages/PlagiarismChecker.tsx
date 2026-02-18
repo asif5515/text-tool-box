@@ -14,8 +14,8 @@ const PlagiarismChecker = () => {
 
   return (
     <ToolPageLayout
-      title="Free Plagiarism Checker for Students"
-      metaDescription="Check your essays and papers for plagiarism. Paste your text and scan for originality. Deep Scan feature coming soon."
+      title="Free Plagiarism Checker — Scan Essays for Originality"
+      metaDescription="Check your essays and papers for plagiarism instantly. Paste your text and scan for originality — free, no sign-up. Deep Scan coming soon."
       howToUse={["Paste your essay or paper text below.", "Click 'Scan for Plagiarism'.", "View the originality result.", "Deep Scan will be available soon for more thorough analysis."]}
       benefits={["Quick basic plagiarism check.", "No sign-up or payment required.", "Deep Scan coming soon for comprehensive analysis.", "Perfect for students writing essays and papers."]}
       faqs={[

@@ -18,8 +18,8 @@ const CaseConverter = () => {
 
   return (
     <ToolPageLayout
-      title="Free Online Case Converter Tool"
-      metaDescription="Convert text to UPPERCASE, lowercase, or Title Case instantly. Free, fast, no sign-up required."
+      title="Free Case Converter — UPPERCASE, lowercase & Title Case"
+      metaDescription="Convert any text to UPPERCASE, lowercase, or Title Case in one click. Fast, free online case converter — no sign-up required."
       howToUse={["Paste or type your text in the input box.", "Click one of the conversion buttons.", "Copy the result with one click."]}
       benefits={["Instant text conversion — no page reload.", "Supports UPPERCASE, lowercase, and Title Case.", "Copy to clipboard with one click.", "Works with any length of text."]}
       faqs={[

@@ -2,8 +2,8 @@ import ToolPageLayout from "@/components/ToolPageLayout";
 
 const Privacy = () => (
   <ToolPageLayout
-    title="Privacy Policy"
-    metaDescription="StudyHelperTool privacy policy — no data collection, no cookies, no tracking. All calculations happen locally in your browser."
+      title="Privacy Policy — StudyHelperTool"
+      metaDescription="Read StudyHelperTool's privacy policy. We collect zero personal data — all tools run locally in your browser. No cookies, no tracking."
   >
     <div className="prose prose-sm max-w-none text-muted-foreground">
       <p className="text-base">

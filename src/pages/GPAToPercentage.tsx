@@ -10,8 +10,8 @@ const GPAToPercentage = () => {
 
   return (
     <ToolPageLayout
-      title="GPA to Percentage Converter — Free Calculator"
-      metaDescription="Convert your GPA to percentage using the standard formula. Understand GPA scales and percentage equivalents for US universities."
+      title="Free GPA to Percentage Converter — Standard 4.0 Scale"
+      metaDescription="Convert your GPA to a percentage instantly using the standard 4.0 scale formula. Clear breakdown and examples for US universities — 100% free."
       howToUse={["Enter your GPA on a 4.0 scale.", "See the percentage equivalent instantly.", "Read the formula explanation below."]}
       benefits={["Instant GPA to percentage conversion.", "Clear formula explanation for learning.", "Works with standard 4.0 scale.", "Free and requires no sign-up."]}
       faqs={[
