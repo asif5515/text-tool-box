@@ -41,6 +41,13 @@ const GPAToPercentage = () => {
             <p>This is the most widely used linear conversion for the 4.0 GPA scale in the United States.</p>
           </div>
         </div>
+
+        <div className="rounded-xl border border-border bg-card p-5">
+          <h3 className="font-display text-lg font-semibold text-foreground">Making Sense of the Numbers</h3>
+          <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+            Converting your GPA can be confusing because different regions use different formulas. At StudyHelperTool, we've used the most standard academic calculation to give you a quick, reliable estimate. Whether you're applying for a job or a new course, we hope this tool makes the process a little easier for you.
+          </p>
+        </div>
       </div>
     </ToolPageLayout>
   );

@@ -44,6 +44,13 @@ const CaseConverter = () => {
             <p className="whitespace-pre-wrap text-sm text-muted-foreground">{result}</p>
           </div>
         )}
+
+        <div className="rounded-xl border border-border bg-card p-5">
+          <h3 className="font-display text-lg font-semibold text-foreground">Why Case Matters</h3>
+          <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+            Sometimes you just need to fix a quick mistake, like a stuck caps lock or a title that needs proper formatting. We built this simple converter at StudyHelperTool to save you the time of retyping everything manually. It's small tools like this that make a big difference in a long study session.
+          </p>
+        </div>
       </div>
     </ToolPageLayout>
   );
