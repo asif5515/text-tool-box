@@ -41,6 +41,13 @@ const PlagiarismChecker = () => {
             </div>
           </div>
         )}
+
+        <div className="rounded-xl border border-border bg-card p-5">
+          <h3 className="font-display text-lg font-semibold text-foreground">Our Commitment to Integrity</h3>
+          <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+            Original work is the foundation of learning. At StudyHelperTool, we provided this checker not just to help you verify your work, but to give you peace of mind before you hit that submit button. It's about feeling confident in the effort you've put in.
+          </p>
+        </div>
       </div>
     </ToolPageLayout>
   );
