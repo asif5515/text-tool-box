@@ -1,4 +1,4 @@
-# StudyHelperTools — Free Student Productivity Tools
+# StudyHelperTools — Free Student Productivity Tools 🚀
 
 ## Project info
 
