@@ -26,9 +26,9 @@ const universities = ["Harvard", "Stanford", "MIT", "Oxford", "UCLA", "NYU"];
 
 const Index = () => {
   useEffect(() => {
-    document.title = "StudyHelperTool — Free Premium Study Tools for Students";
+    document.title = "StudyHelperTool — Free GPA Calculator, Word Counter & Study Tools";
     const meta = document.querySelector('meta[name="description"]');
-    const content = "Free premium study tools: GPA Calculator, Case Converter, Word Counter & more. Trusted by students from top universities.";
+    const content = "StudyHelperTool offers free, premium-quality academic tools — GPA Calculator, Case Converter, Word Counter, Plagiarism Checker & more. Trusted by thousands of students.";
     if (meta) meta.setAttribute("content", content);
     else {
       const m = document.createElement("meta");
