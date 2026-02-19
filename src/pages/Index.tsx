@@ -123,6 +123,49 @@ const Index = () => {
         </div>
       </section>
 
+      {/* How It Works */}
+      <section className="py-16 md:py-24">
+        <div className="container">
+          <h2 className="font-display text-center text-3xl font-bold text-foreground md:text-4xl">How It Works</h2>
+          <p className="mx-auto mt-3 max-w-lg text-center text-muted-foreground">
+            StudyHelperTool keeps things simple — no accounts, no installs, no fuss.
+          </p>
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
+            {[
+              {
+                step: "1",
+                title: "Pick Your Tool",
+                desc: "Choose from the GPA Calculator, Word Counter, Case Converter, or any other tool in the kit. Each one is purpose-built for a specific academic task.",
+              },
+              {
+                step: "2",
+                title: "Enter Your Data",
+                desc: "Type in your grades, paste your essay, or enter any text. Everything processes instantly in your browser — nothing is sent to a server or stored anywhere.",
+              },
+              {
+                step: "3",
+                title: "Get Your Result",
+                desc: "See your GPA, word count, converted text, or percentage in seconds. Copy it, use it, and get back to studying. That's the whole idea.",
+              },
+            ].map((item) => (
+              <motion.div
+                key={item.step}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-start gap-4 rounded-xl border border-border bg-card p-6"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground font-display font-bold text-lg">
+                  {item.step}
+                </div>
+                <h3 className="font-display text-lg font-semibold text-foreground">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <AdPlaceholder className="container my-8" />
 
       <Footer />
