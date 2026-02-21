@@ -20,9 +20,10 @@ const WordCounter = () => {
       howToUse={["Paste or type your text in the box below.", "Stats update in real-time.", "Copy your text with one click."]}
       benefits={["Real-time word and character counting.", "Estimated reading time based on 200 WPM.", "Tracks sentences and paragraphs.", "No sign-up required."]}
       faqs={[
-        { question: "How is reading time calculated?", answer: "Reading time is estimated at 200 words per minute, the average adult reading speed." },
-        { question: "Does it count spaces?", answer: "We show both character count with and without spaces." },
-        { question: "Is there a word limit?", answer: "No. The tool handles text of any length." },
+        { question: "How is reading time calculated?", answer: "We estimate reading time based on the widely accepted average of 200 words per minute. It's a rough guide — some people read faster, some slower — but it gives you a useful ballpark for how long your text will take someone to get through." },
+        { question: "Does it count spaces?", answer: "We show both: total characters (which includes spaces) and a separate count without spaces. This is handy if you're working with a platform that has a strict character limit." },
+        { question: "Is there a word limit?", answer: "Nope. You can paste as much text as you want — an entire essay, a thesis chapter, or even a novel draft. The tool handles it all in real-time without slowing down." },
+        { question: "How are sentences counted?", answer: "The tool splits your text on common sentence-ending punctuation — periods, exclamation marks, and question marks. It's not perfect for edge cases like abbreviations (e.g., 'U.S.A.'), but it's accurate for typical writing." },
       ]}
     >
       <div className="space-y-4">

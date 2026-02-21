@@ -60,9 +60,10 @@ const GPACalculator = () => {
       howToUse={["Select a letter grade for each course.", "Enter the credit hours.", "Add more courses or semesters as needed.", "View your semester and cumulative GPA instantly.", "Click 'Save as PDF' to download your results."]}
       benefits={["Supports 4.0 scale grading system used by US universities.", "Multi-semester tracking for cumulative GPA.", "No sign-up required — completely free.", "Export to PDF for your records."]}
       faqs={[
-        { question: "How is GPA calculated on a 4.0 scale?", answer: "Each letter grade is assigned a point value (A=4.0, B=3.0, etc.). The GPA is the weighted average of grade points by credit hours." },
-        { question: "Can I calculate GPA for multiple semesters?", answer: "Yes! Click 'Add Semester' to track multiple semesters and see your cumulative GPA." },
-        { question: "Is this GPA calculator accurate for all US universities?", answer: "This calculator uses the standard 4.0 scale. Some universities may use variations, so check with your registrar." },
+        { question: "How is GPA calculated on a 4.0 scale?", answer: "Each letter grade maps to a number — A is 4.0, B is 3.0, and so on. You multiply each grade's point value by the number of credit hours for that course, add everything up, and divide by total credits. That weighted average is your GPA." },
+        { question: "Can I calculate GPA for multiple semesters?", answer: "Yes! Just click 'Add Semester' to create a new section. Each semester calculates independently, and the cumulative GPA at the bottom reflects all of them combined." },
+        { question: "Is this GPA calculator accurate for all US universities?", answer: "It uses the standard 4.0 scale that the vast majority of US colleges follow. That said, some schools have slight variations (like counting A+ as 4.3), so it's worth double-checking with your registrar if precision matters for your situation." },
+        { question: "Can I save my GPA results?", answer: "You can use the 'Save as PDF' button to download your calculations. If you create an account, we're working on letting you save and track your GPA over time right from your dashboard." },
       ]}
     >
       <div className="space-y-8">
