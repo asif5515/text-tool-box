@@ -23,9 +23,10 @@ const CaseConverter = () => {
       howToUse={["Paste or type your text in the input box.", "Click one of the conversion buttons.", "Copy the result with one click."]}
       benefits={["Instant text conversion — no page reload.", "Supports UPPERCASE, lowercase, and Title Case.", "Copy to clipboard with one click.", "Works with any length of text."]}
       faqs={[
-        { question: "What is Title Case?", answer: "Title Case capitalizes the first letter of each word and lowercases the rest." },
-        { question: "Is there a character limit?", answer: "No. You can convert text of any length." },
-        { question: "Do I need to sign up?", answer: "No sign-up required. The tool is completely free." },
+        { question: "What is Title Case?", answer: "Title Case capitalizes the first letter of each word and makes everything else lowercase. It's the standard for headlines, book titles, and formal document headers. For example, 'the quick brown fox' becomes 'The Quick Brown Fox'." },
+        { question: "Is there a character limit?", answer: "Not at all. Whether it's a single line or an entire document, the converter handles text of any length without issues." },
+        { question: "Do I need to sign up?", answer: "No sign-up, no email, no account needed. Just paste your text and convert. We believe useful tools shouldn't require you to hand over personal information." },
+        { question: "Can I convert text back to its original format?", answer: "The tool doesn't store your original text, but since your input stays in the text box, you can always re-paste the original or try a different conversion at any time." },
       ]}
     >
       <div className="space-y-4">
@@ -48,7 +49,7 @@ const CaseConverter = () => {
         <div className="rounded-xl border border-border bg-card p-5">
           <h3 className="font-display text-lg font-semibold text-foreground">Why Case Matters</h3>
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-            Sometimes you just need to fix a quick mistake, like a stuck caps lock or a title that needs proper formatting. We built this simple converter at StudyHelperTool to save you the time of retyping everything manually. It's small tools like this that make a big difference in a long study session.
+            We've all been there — you type out a whole paragraph only to realize caps lock was on, or you need to reformat a title for a submission. Retyping everything is tedious. We built this converter at StudyHelperTools so you can fix formatting in seconds and get back to the work that actually matters.
           </p>
         </div>
       </div>

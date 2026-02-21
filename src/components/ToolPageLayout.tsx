@@ -15,7 +15,7 @@ interface ToolPageLayoutProps {
 
 const ToolPageLayout = ({ title, metaDescription, children, howToUse, benefits, faqs }: ToolPageLayoutProps) => {
   useEffect(() => {
-    document.title = `${title} | StudyHelperTool`;
+    document.title = `${title} | StudyHelperTools`;
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute("content", metaDescription);
     else {

@@ -19,9 +19,10 @@ const PlagiarismChecker = () => {
       howToUse={["Paste your essay or paper text below.", "Click 'Scan for Plagiarism'.", "View the originality result.", "Deep Scan will be available soon for more thorough analysis."]}
       benefits={["Quick basic plagiarism check.", "No sign-up or payment required.", "Deep Scan coming soon for comprehensive analysis.", "Perfect for students writing essays and papers."]}
       faqs={[
-        { question: "How does the plagiarism checker work?", answer: "Currently the tool provides a basic text analysis. Our upcoming Deep Scan feature will cross-reference multiple databases for comprehensive plagiarism detection." },
-        { question: "Is this tool free?", answer: "Yes! The basic scan is completely free. Deep Scan will be available as a premium feature." },
-        { question: "When is Deep Scan launching?", answer: "Deep Scan is currently in development. Sign up for notifications to be the first to know when it launches." },
+        { question: "How does the plagiarism checker work?", answer: "Right now, the tool runs a basic text analysis to flag potential issues. It's a quick sanity check before you submit. Our upcoming Deep Scan feature will cross-reference your text against academic databases and online sources for a much more thorough analysis." },
+        { question: "Is this tool free?", answer: "Yes, the basic scan is completely free and always will be. When Deep Scan launches, it will be available as a premium feature for students who need comprehensive plagiarism detection." },
+        { question: "When is Deep Scan launching?", answer: "Deep Scan is actively in development. We're building it to compare your text against millions of sources — academic papers, websites, and published content. We'll announce the launch through our site, so check back soon." },
+        { question: "Can I use this for academic papers?", answer: "Absolutely. This tool is designed specifically for students working on essays, research papers, and assignments. It gives you a quick confidence check that your work is original before you turn it in." },
       ]}
     >
       <div className="space-y-4">
@@ -45,7 +46,7 @@ const PlagiarismChecker = () => {
         <div className="rounded-xl border border-border bg-card p-5">
           <h3 className="font-display text-lg font-semibold text-foreground">Our Commitment to Integrity</h3>
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-            Original work is the foundation of learning. At StudyHelperTool, we provided this checker not just to help you verify your work, but to give you peace of mind before you hit that submit button. It's about feeling confident in the effort you've put in.
+            Original work is the foundation of real learning. We built this checker at StudyHelperTools not just to help you verify your writing, but to give you peace of mind before you hit submit. It's about feeling confident in the effort you've put in — and knowing your work stands on its own.
           </p>
         </div>
       </div>
