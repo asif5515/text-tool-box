@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/hooks/useAuth";
+import FloatingGPAWidget from "@/components/FloatingGPAWidget";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import GPACalculator from "./pages/GPACalculator";
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <FloatingGPAWidget />
         </BrowserRouter>
       </AuthProvider>
     </TooltipProvider>

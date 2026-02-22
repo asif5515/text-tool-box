@@ -9,21 +9,21 @@ import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 
 const academicTools = [
-  { title: "GPA Calculator", desc: "Plug in your grades and credit hours, and this tool handles the math for you — semester by semester, on a standard 4.0 scale.", icon: Calculator, path: "/gpa-calculator" },
-  { title: "CGPA Calculator", desc: "Already know your semester GPAs? Enter them here to see your cumulative GPA across your entire academic career.", icon: BarChart3, path: "/cgpa-calculator" },
-  { title: "GPA to Percentage", desc: "Need your GPA as a percentage? This converter does it instantly using the standard formula, with a clear breakdown.", icon: Percent, path: "/gpa-to-percentage" },
+  { title: "GPA Calculator", desc: "Enter your grades and credit hours — this tool handles the math, semester by semester, on a standard 4.0 scale. No sign-ups, no nonsense.", icon: Calculator, path: "/gpa-calculator" },
+  { title: "CGPA Calculator", desc: "Already have your semester GPAs? Plug them in and get your cumulative GPA across your entire academic career in seconds.", icon: BarChart3, path: "/cgpa-calculator" },
+  { title: "GPA to Percentage", desc: "Need to convert your GPA into a percentage for applications or transcripts? This tool does it instantly with a clear breakdown.", icon: Percent, path: "/gpa-to-percentage" },
 ];
 
 const writingTools = [
-  { title: "Word Counter", desc: "Paste any text and instantly see word count, character count, sentence count, and an estimated reading time.", icon: FileText, path: "/word-counter" },
-  { title: "Case Converter", desc: "Quickly switch between UPPERCASE, lowercase, and Title Case — great for fixing formatting mistakes without retyping.", icon: Type, path: "/case-converter" },
-  { title: "Plagiarism Checker", desc: "Run a quick originality check on your essay before you submit. Deep Scan with source matching is on the way.", icon: ShieldCheck, path: "/plagiarism-checker" },
+  { title: "Word Counter", desc: "Paste any text and instantly see word count, character count, sentence count, and estimated reading time. Clean and distraction-free.", icon: FileText, path: "/word-counter" },
+  { title: "Case Converter", desc: "Switch between UPPERCASE, lowercase, and Title Case in one click. Perfect for fixing formatting without retyping a single word.", icon: Type, path: "/case-converter" },
+  { title: "Plagiarism Checker", desc: "Run a quick originality check on your essay before you hit submit. Deep scan with source matching is on the roadmap.", icon: ShieldCheck, path: "/plagiarism-checker" },
 ];
 
 const testimonials = [
-  { name: "Sarah J.", school: "UCLA", text: "I used to calculate my GPA by hand every semester. This tool does it in seconds and the multi-semester feature is a lifesaver." },
-  { name: "Mark T.", school: "NYU", text: "The word counter is part of my writing routine now. I check reading time before every submission — it's surprisingly helpful." },
-  { name: "Emily R.", school: "UT Austin", text: "Finally a case converter that just works. No pop-ups, no sign-up walls. This is exactly how online tools should be." },
+  { name: "Sarah J.", school: "UCLA", text: "I used to calculate my GPA by hand every semester. This tool does it in seconds — and the multi-semester feature is genuinely a lifesaver before registration deadlines." },
+  { name: "Mark T.", school: "NYU", text: "The word counter has become part of my writing routine. I check reading time before every submission — it's one of those small things that makes a real difference." },
+  { name: "Emily R.", school: "UT Austin", text: "Finally, a case converter that just works. No pop-ups, no sign-up walls, no ads covering half the screen. This is how online tools should be built." },
 ];
 
 const universities = ["Harvard", "Stanford", "MIT", "Oxford", "UCLA", "NYU"];
@@ -32,7 +32,7 @@ const Index = () => {
   useEffect(() => {
     document.title = "StudyHelperTools — Free GPA Calculator, Word Counter & Academic Tools";
     const meta = document.querySelector('meta[name="description"]');
-    const content = "StudyHelperTools offers free, premium-quality academic tools — GPA Calculator, CGPA Calculator, Case Converter, Word Counter, Plagiarism Checker & more. Trusted by thousands of students.";
+    const content = "StudyHelperTools offers free, premium-quality academic tools — GPA Calculator, CGPA Calculator, Case Converter, Word Counter, Plagiarism Checker & more. Built by students, for students.";
     if (meta) meta.setAttribute("content", content);
     else {
       const m = document.createElement("meta");
@@ -49,7 +49,7 @@ const Index = () => {
           <Link to={tool.path} className="tool-card group block rounded-xl border border-border bg-card p-6">
             <tool.icon className="h-8 w-8 text-primary" />
             <h3 className="mt-4 font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors">{tool.title}</h3>
-            <p className="mt-1 text-sm text-muted-foreground">{tool.desc}</p>
+            <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{tool.desc}</p>
             <span className="mt-4 inline-flex items-center text-sm font-medium text-primary">
               Open tool <ArrowRight className="ml-1 h-3.5 w-3.5" />
             </span>
@@ -71,7 +71,7 @@ const Index = () => {
               Study Smarter,<br />Not Harder.
             </h1>
             <p className="mt-4 max-w-md text-lg text-primary-foreground/70">
-              Free, premium-quality tools built for students who demand speed, accuracy, and simplicity.
+              Free, premium-quality tools built for students who demand speed, accuracy, and simplicity. No sign-ups required.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="font-semibold">
@@ -83,7 +83,7 @@ const Index = () => {
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.2 }} className="hidden md:block">
-            <img src={heroImage} alt="Study tools illustration" className="w-full rounded-2xl opacity-90" />
+            <img src={heroImage} alt="Student using academic tools for GPA calculation" className="w-full rounded-2xl opacity-90" />
           </motion.div>
         </div>
       </section>
@@ -91,7 +91,7 @@ const Index = () => {
       {/* Trust Strip */}
       <section className="border-b border-border bg-card py-8">
         <div className="container text-center">
-          <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Tools built with standards trusted by students from</p>
+          <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Trusted by students from top universities worldwide</p>
           <div className="mt-5 flex flex-wrap items-center justify-center gap-8 md:gap-12">
             {universities.map((u) => (
               <span key={u} className="grayscale-logo font-display text-lg font-bold text-foreground md:text-xl">{u}</span>
@@ -106,7 +106,7 @@ const Index = () => {
       <section id="tools" className="py-16 md:py-24">
         <div className="container">
           <h2 className="font-display text-center text-3xl font-bold text-foreground md:text-4xl">Academic Calculators</h2>
-          <p className="mx-auto mt-3 max-w-lg text-center text-muted-foreground">Calculate your GPA, CGPA, and percentage conversions — quickly and accurately.</p>
+          <p className="mx-auto mt-3 max-w-lg text-center text-muted-foreground">Calculate your GPA, CGPA, and percentage conversions — quickly, accurately, and without any fuss.</p>
           {renderToolGrid(academicTools)}
         </div>
       </section>
@@ -115,7 +115,7 @@ const Index = () => {
       <section className="border-t border-border bg-card/50 py-16 md:py-24">
         <div className="container">
           <h2 className="font-display text-center text-3xl font-bold text-foreground md:text-4xl">Writing Tools</h2>
-          <p className="mx-auto mt-3 max-w-lg text-center text-muted-foreground">Count words, fix formatting, and check for originality — all in one place.</p>
+          <p className="mx-auto mt-3 max-w-lg text-center text-muted-foreground">Count words, fix formatting, and check for originality — everything you need for clean, polished writing.</p>
           {renderToolGrid(writingTools)}
         </div>
       </section>
@@ -124,7 +124,7 @@ const Index = () => {
       <section className="border-t border-border py-16 md:py-24">
         <div className="container">
           <h2 className="font-display text-center text-3xl font-bold text-foreground md:text-4xl">What Students Say</h2>
-          <p className="mx-auto mt-3 max-w-lg text-center text-muted-foreground">Real feedback from students across the country.</p>
+          <p className="mx-auto mt-3 max-w-lg text-center text-muted-foreground">Real feedback from real students across the country.</p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {testimonials.map((t, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
@@ -145,13 +145,13 @@ const Index = () => {
         <div className="container">
           <h2 className="font-display text-center text-3xl font-bold text-foreground md:text-4xl">How It Works</h2>
           <p className="mx-auto mt-3 max-w-lg text-center text-muted-foreground">
-            StudyHelperTools keeps things simple — no accounts required, no installs, no fuss.
+            No accounts required for tools, no installs, no complicated setup. Just open and go.
           </p>
           <div className="mt-10 grid gap-8 md:grid-cols-3">
             {[
-              { step: "1", title: "Pick Your Tool", desc: "Choose from our Academic Calculators or Writing Tools. Each one is purpose-built for a specific task you'll actually run into as a student." },
+              { step: "1", title: "Pick Your Tool", desc: "Choose from our Academic Calculators or Writing Tools. Each one is purpose-built for a specific task students encounter regularly." },
               { step: "2", title: "Enter Your Data", desc: "Type in your grades, paste your essay, or enter any text. Everything runs in your browser — nothing is sent to a server or stored anywhere." },
-              { step: "3", title: "Get Your Result", desc: "See your GPA, word count, converted text, or percentage in seconds. Copy it, use it, and get back to what matters." },
+              { step: "3", title: "Get Your Result", desc: "See your GPA, word count, converted text, or percentage in seconds. Copy it, use it, and get back to what actually matters." },
             ].map((item) => (
               <motion.div key={item.step} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 className="flex flex-col items-start gap-4 rounded-xl border border-border bg-card p-6">
@@ -163,6 +163,19 @@ const Index = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* SEO Brand Block */}
+      <section className="border-t border-border py-16 md:py-24">
+        <div className="container max-w-3xl text-center">
+          <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">Why StudyHelperTools?</h2>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            StudyHelperTools is an independent academic platform built specifically for university and college students. Whether you're calculating your semester GPA, tracking your cumulative academic performance, converting grades to percentages for graduate school applications, or simply counting words before a submission deadline — our tools are designed to save you time and reduce stress.
+          </p>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            Unlike other "free" tools that bombard you with ads, force account creation, or sell your data, StudyHelperTools is committed to being genuinely useful. Every core tool runs locally in your browser for maximum privacy. We're adding new features like semester tracking, career predictions, and AI-powered study insights — all shaped by feedback from students like you.
+          </p>
         </div>
       </section>
 

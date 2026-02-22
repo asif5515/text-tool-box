@@ -19,7 +19,12 @@ export type Database = {
           avatar_url: string | null
           created_at: string
           display_name: string | null
+          graduation_year: number | null
           id: string
+          is_premium: boolean
+          major: string | null
+          target_gpa: number | null
+          university: string | null
           updated_at: string
           user_id: string
         }
@@ -27,7 +32,12 @@ export type Database = {
           avatar_url?: string | null
           created_at?: string
           display_name?: string | null
+          graduation_year?: number | null
           id?: string
+          is_premium?: boolean
+          major?: string | null
+          target_gpa?: number | null
+          university?: string | null
           updated_at?: string
           user_id: string
         }
@@ -35,9 +45,50 @@ export type Database = {
           avatar_url?: string | null
           created_at?: string
           display_name?: string | null
+          graduation_year?: number | null
           id?: string
+          is_premium?: boolean
+          major?: string | null
+          target_gpa?: number | null
+          university?: string | null
           updated_at?: string
           user_id?: string
+        }
+        Relationships: []
+      }
+      semester_records: {
+        Row: {
+          created_at: string
+          credits: number
+          gpa: number
+          id: string
+          semester_name: string
+          semester_number: number
+          updated_at: string
+          user_id: string
+          year: number | null
+        }
+        Insert: {
+          created_at?: string
+          credits?: number
+          gpa: number
+          id?: string
+          semester_name: string
+          semester_number: number
+          updated_at?: string
+          user_id: string
+          year?: number | null
+        }
+        Update: {
+          created_at?: string
+          credits?: number
+          gpa?: number
+          id?: string
+          semester_name?: string
+          semester_number?: number
+          updated_at?: string
+          user_id?: string
+          year?: number | null
         }
         Relationships: []
       }
