@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import AuthModal from "./AuthModal";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -20,28 +21,30 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop */}
-          <div className="hidden items-center gap-6 md:flex">
+          <div className="hidden items-center gap-5 md:flex">
             <Link to="/gpa-calculator" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">GPA Calculator</Link>
-            <Link to="/cgpa-calculator" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">CGPA Calculator</Link>
+            <Link to="/cgpa-calculator" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">CGPA</Link>
             <Link to="/case-converter" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Case Converter</Link>
             <Link to="/word-counter" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Word Counter</Link>
             <Link to="/gpa-to-percentage" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">GPA to %</Link>
-            <Link to="/plagiarism-checker" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Plagiarism Checker</Link>
+            <ThemeToggle />
             {!loading && (
               user ? (
-                <Link to="/dashboard" className="ml-2 flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors">
+                <Link to="/dashboard" className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors">
                   <UserCircle className="h-5 w-5" /> Dashboard
                 </Link>
               ) : (
-                <Button variant="outline" size="sm" className="ml-2" onClick={() => setAuthOpen(true)}>Login / Sign Up</Button>
+                <Button variant="outline" size="sm" onClick={() => setAuthOpen(true)}>Login / Sign Up</Button>
               )
             )}
           </div>
 
-          {/* Mobile toggle */}
-          <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <button className="text-foreground" onClick={() => setOpen(!open)}>
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu */}
