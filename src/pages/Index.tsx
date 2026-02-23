@@ -67,17 +67,17 @@ const Index = () => {
       <section className="hero-section relative overflow-hidden py-20 md:py-32">
         <div className="container relative z-10 grid gap-10 md:grid-cols-2 md:items-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="font-display text-4xl font-bold leading-tight text-primary-foreground md:text-5xl lg:text-6xl">
+            <h1 className="font-display text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
               Study Smarter,<br />Not Harder.
             </h1>
-            <p className="mt-4 max-w-md text-lg text-primary-foreground/70">
+            <p className="mt-4 max-w-md text-lg text-white/75">
               Free, premium-quality tools built for students who demand speed, accuracy, and simplicity. No sign-ups required.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="font-semibold">
+              <Button asChild size="lg" className="font-semibold bg-primary text-primary-foreground hover:bg-primary/90">
                 <Link to="/gpa-calculator">Try GPA Calculator <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button asChild variant="outline" size="lg" className="border-white/25 text-white hover:bg-white/10">
                 <a href="#tools">View All Tools</a>
               </Button>
             </div>

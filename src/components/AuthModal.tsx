@@ -32,6 +32,7 @@ const AuthModal = ({ open, onOpenChange }: AuthModalProps) => {
         toast({ title: "Welcome back!" });
         onOpenChange(false);
         resetForm();
+        window.location.href = "/dashboard";
       }
     } else {
       const { error } = await signUp(email, password, displayName);
