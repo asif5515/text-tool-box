@@ -40,7 +40,8 @@ const App = () => (
             <Route path="/privacy-policy" element={<Privacy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+           <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/profile" element={<Dashboard />} /> 
             <Route path="*" element={<NotFound />} />
           </Routes>
           <FloatingGPAWidget />
