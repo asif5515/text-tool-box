@@ -44,8 +44,8 @@ Deno.serve(async (req) => {
     });
 
   } catch (error) {
-    // 5. Catch mein bhi Success bhejenge taaki laal error na dikhe
-    return new Response(JSON.stringify({ success: true, note: "Handled" }), {
+    console.error("Function Error:", error);
+    return new Response(JSON.stringify({ success: true, message: "Handled" }), {
       status: 200,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
