@@ -18,6 +18,7 @@ import Privacy from "./pages/Privacy";
 import TermsOfService from "./pages/TermsOfService";
 import Contact from "./pages/Contact";
 import Dashboard from "@/pages/Dashboard";
+import BlogGPAToPercentageGuide from "./pages/BlogGPAToPercentageGuide";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/profile" element={<Dashboard />} />
+            <Route path="/blog/gpa-to-percentage-guide" element={<BlogGPAToPercentageGuide />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <FloatingGPAWidget />
