@@ -27,6 +27,7 @@ const Navbar = () => {
             <Link to="/case-converter" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Case Converter</Link>
             <Link to="/word-counter" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Word Counter</Link>
             <Link to="/gpa-to-percentage" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">GPA to %</Link>
+            <Link to="/blog" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Blog</Link>
             <ThemeToggle />
             {!loading && (
               user ? (
@@ -57,6 +58,7 @@ const Navbar = () => {
               <Link to="/word-counter" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">Word Counter</Link>
               <Link to="/gpa-to-percentage" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">GPA to %</Link>
               <Link to="/plagiarism-checker" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">Plagiarism Checker</Link>
+              <Link to="/blog" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">Blog</Link>
               {!loading && (
                 user ? (
                   <Link to="/dashboard" onClick={() => setOpen(false)} className="text-sm font-medium text-primary flex items-center gap-1.5">
