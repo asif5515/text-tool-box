@@ -44,6 +44,26 @@ const WordCounter = () => {
             </div>
           ))}
         </div>
+
+        <section className="mt-10 rounded-2xl border border-border bg-card p-6 md:p-8">
+          <h2 className="font-display text-2xl font-bold text-foreground">
+            Why Our Student-First Word Counter is Different?
+          </h2>
+          <div className="mt-4 space-y-4 text-muted-foreground leading-relaxed">
+            <p>
+              In the world of strict academic deadlines, every word counts. Whether you are drafting a UCAS Personal Statement, a 1000-word university essay, or a quick LinkedIn post, maintaining the right length is crucial.
+            </p>
+            <p>
+              Our tool doesn't just count characters; it helps you stay within the <strong className="text-foreground">"Goldilocks Zone"</strong>—not too long, not too short.
+            </p>
+            <div className="rounded-xl bg-primary/10 p-4 md:p-5">
+              <p className="font-semibold text-foreground">Pro Tip for Students:</p>
+              <p className="mt-1">
+                Most professors allow a 10% margin on word counts. If your limit is 2000 words, staying between 1800-2200 is usually safe. Use our real-time paragraph and sentence tracker to ensure your writing remains crisp and professional.
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     </ToolPageLayout>
   );
