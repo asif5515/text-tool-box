@@ -1,6 +1,8 @@
 import ToolPageLayout from "@/components/ToolPageLayout";
 import { Textarea } from "@/components/ui/textarea";
 import CopyButton from "@/components/CopyButton";
+import FAQSection from "@/components/FAQSection";
+import { FileText, BarChart3, Copy, ListChecks } from "lucide-react";
 import { useState } from "react";
 
 const WordCounter = () => {
@@ -17,14 +19,6 @@ const WordCounter = () => {
     <ToolPageLayout
       title="Free Online Word Counter for Students"
       metaDescription="Accurate word count tool for assignments and essays. Bypass AI detection with our student-focused writing tips."
-      howToUse={["Paste or type your text in the box below.", "Stats update in real-time.", "Copy your text with one click."]}
-      benefits={["Real-time word and character counting.", "Estimated reading time based on 200 WPM.", "Tracks sentences and paragraphs.", "No sign-up required."]}
-      faqs={[
-        { question: "How is reading time calculated?", answer: "We estimate reading time based on the widely accepted average of 200 words per minute. It's a rough guide — some people read faster, some slower — but it gives you a useful ballpark for how long your text will take someone to get through." },
-        { question: "Does it count spaces?", answer: "We show both: total characters (which includes spaces) and a separate count without spaces. This is handy if you're working with a platform that has a strict character limit." },
-        { question: "Is there a word limit?", answer: "Nope. You can paste as much text as you want — an entire essay, a thesis chapter, or even a novel draft. The tool handles it all in real-time without slowing down." },
-        { question: "How are sentences counted?", answer: "The tool splits your text on common sentence-ending punctuation — periods, exclamation marks, and question marks. It's not perfect for edge cases like abbreviations (e.g., 'U.S.A.'), but it's accurate for typical writing." },
-      ]}
     >
       <div className="space-y-4">
         <Textarea value={text} onChange={(e) => setText(e.target.value)} placeholder="Start typing or paste your text..." rows={8} className="resize-none" />
@@ -64,6 +58,35 @@ const WordCounter = () => {
             </div>
           </div>
         </section>
+
+        <section className="mt-10 rounded-2xl border border-border bg-card p-6 md:p-8">
+          <h2 className="font-display text-2xl font-bold text-foreground flex items-center gap-2">
+            <ListChecks className="w-6 h-6 text-primary" />
+            How to Use This Tool
+          </h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {[
+              { icon: FileText, step: "Step 1", text: "Paste your text or essay into the box above." },
+              { icon: BarChart3, step: "Step 2", text: "Check the real-time stats for words, characters, and sentences instantly." },
+              { icon: Copy, step: "Step 3", text: "Use the 'Copy' button to take your text back once you've reached your target." },
+            ].map((item) => (
+              <div key={item.step} className="flex flex-col items-center text-center p-4 rounded-xl bg-background/50 border border-border/50">
+                <item.icon className="w-8 h-8 text-primary mb-3" strokeWidth={1.5} />
+                <p className="text-sm font-semibold text-primary">{item.step}</p>
+                <p className="mt-2 text-muted-foreground text-sm leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <FAQSection
+          pageTitle="Free Online Word Counter for Students"
+          faqs={[
+            { question: "Is this word counter accurate for academic essays?", answer: "Yes! We use a standard white-space counting algorithm that matches Google Docs and Microsoft Word's accuracy." },
+            { question: "Does this tool save my data?", answer: "No. We value your privacy. Your text stays in your browser and is never stored on our servers." },
+            { question: "Can I use this for social media posts?", answer: "Absolutely. It's perfect for tracking character limits for Twitter (X), LinkedIn, and Instagram." },
+          ]}
+        />
       </div>
     </ToolPageLayout>
   );
