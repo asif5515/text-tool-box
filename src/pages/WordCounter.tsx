@@ -15,8 +15,8 @@ const WordCounter = () => {
 
   return (
     <ToolPageLayout
-      title="Free Word Counter — Characters, Sentences & Reading Time"
-      metaDescription="Count words, characters, sentences, and paragraphs in real-time. Includes reading time estimates. Free online word counter — no sign-up needed."
+      title="Free Online Word Counter for Students"
+      metaDescription="Accurate word count tool for assignments and essays. Bypass AI detection with our student-focused writing tips."
       howToUse={["Paste or type your text in the box below.", "Stats update in real-time.", "Copy your text with one click."]}
       benefits={["Real-time word and character counting.", "Estimated reading time based on 200 WPM.", "Tracks sentences and paragraphs.", "No sign-up required."]}
       faqs={[
