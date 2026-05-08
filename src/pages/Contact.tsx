@@ -50,11 +50,17 @@ const Contact = () => {
           </div>
           <h2 className="mt-5 font-display text-2xl font-bold text-foreground">We read every message.</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Send a note about a calculator issue, feature request, partnership idea, or anything that would make StudyHelperTools more useful for students.
+            For support, collaborations, or feedback, email us directly at:
           </p>
+          <a
+            href="mailto:hello@studyhelpertools.com"
+            className="mt-3 inline-flex items-center gap-2 font-display text-lg font-semibold text-primary hover:underline"
+          >
+            hello@studyhelpertools.com
+          </a>
           <Alert className="mt-6 bg-background">
             <AlertDescription className="text-muted-foreground">
-              Email replies come from StudyHelperTools, so you can recognize us easily in your inbox.
+              Messages submitted through the form are routed to the same inbox — replies come from StudyHelperTools.
             </AlertDescription>
           </Alert>
         </section>
