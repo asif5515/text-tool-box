@@ -20,6 +20,7 @@ import TermsOfService from "./pages/TermsOfService";
 import Contact from "./pages/Contact";
 import Dashboard from "@/pages/Dashboard";
 import BlogGPAToPercentageGuide from "./pages/BlogGPAToPercentageGuide";
+import BlogWriteEssayFast from "./pages/BlogWriteEssayFast";
 import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
