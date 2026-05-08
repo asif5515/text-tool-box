@@ -20,6 +20,7 @@ import TermsOfService from "./pages/TermsOfService";
 import Contact from "./pages/Contact";
 import Dashboard from "@/pages/Dashboard";
 import BlogGPAToPercentageGuide from "./pages/BlogGPAToPercentageGuide";
+import BlogWriteEssayFast from "./pages/BlogWriteEssayFast";
 import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="/profile" element={<Dashboard />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/gpa-to-percentage-guide" element={<BlogGPAToPercentageGuide />} />
+            <Route path="/blog/how-to-write-1000-word-essay-fast" element={<BlogWriteEssayFast />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <FloatingGPAWidget />
