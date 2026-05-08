@@ -6,6 +6,15 @@ import { useEffect } from "react";
 
 const posts = [
   {
+    slug: "/blog/how-to-write-1000-word-essay-fast",
+    title: "How to Write a 1,000-Word Essay in 2 Hours: A Student's Survival Guide",
+    excerpt:
+      "A no-fluff system for drafting a solid 1,000-word essay in two hours — outline fast, draft without deleting, and polish like a pro.",
+    date: "May 8, 2026",
+    readTime: "5 min read",
+    category: "Study Hacks",
+  },
+  {
     slug: "/blog/gpa-to-percentage-guide",
     title: "GPA to Percentage: The Complete Conversion Guide",
     excerpt:
