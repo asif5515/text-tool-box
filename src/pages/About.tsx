@@ -3,39 +3,33 @@ import ToolPageLayout from "@/components/ToolPageLayout";
 const About = () => (
   <ToolPageLayout
     title="About StudyHelperTools"
-    metaDescription="StudyHelperTools is a free suite of academic productivity tools designed for students. Our mission is to make studying faster, smarter, and accessible to everyone."
+    metaDescription="StudyHelperTools is a small team of developers and educators building free, high-quality academic utility tools for students worldwide."
   >
     <div className="prose prose-sm max-w-none text-muted-foreground">
-      <h2 className="font-display text-2xl font-bold text-foreground">Our Mission</h2>
+      <h2 className="font-display text-2xl font-bold text-foreground">Who We Are</h2>
       <p>
-        StudyHelperTools was built with a simple philosophy: every student deserves access to fast, reliable, and thoughtfully designed academic tools — without having to deal with paywalls, forced sign-ups, or cluttered interfaces.
+        Welcome to <strong className="text-foreground">StudyHelperTools</strong>. We are a small team of developers and educators dedicated to making academic life easier for students globally. Our mission is simple: to provide high-quality, free-to-use utility tools that help you focus on learning rather than formatting.
       </p>
       <p>
-        Whether you need to calculate your GPA, count the words in an essay, convert text formatting, or run a quick originality check — we believe these essentials should be free, private, and available to anyone with a browser. That's the standard we hold ourselves to, and it's the reason thousands of students rely on us every week.
+        From calculating word counts for UCAS personal statements to tracking GPA, we build tools that are accurate, fast, and accessible to everyone, everywhere.
       </p>
 
-      <h2 className="mt-10 font-display text-2xl font-bold text-foreground">The Story Behind It</h2>
+      <h2 className="mt-10 font-display text-2xl font-bold text-foreground">Our Mission</h2>
       <p>
-        It started during sophomore year. Picture this: 2 AM in a dorm room, buried under assignments, trying to figure out whether a scholarship was still within reach. Three "free" GPA calculators later — one drowning in pop-ups, another demanding an account, a third completely broken on mobile — the frustration became motivation.
-      </p>
-      <p>
-        What began as a single GPA calculator shared between a handful of friends has grown into a complete academic toolkit used by students from universities across the country. Every feature on this site was shaped by real student feedback, real academic needs, and a genuine desire to save people time.
+        Every student deserves access to fast, reliable, and thoughtfully designed academic tools — without paywalls, forced sign-ups, or cluttered interfaces. Whether you need to calculate your GPA, count words in an essay, convert text formatting, or check originality, we believe these essentials should be free, private, and one click away.
       </p>
 
       <h2 className="mt-10 font-display text-2xl font-bold text-foreground">What Sets Us Apart</h2>
       <ul className="space-y-2">
-        <li><strong className="text-foreground">Genuinely Free.</strong> No hidden tiers, no "free trials" that vanish after a week. The core tools are free and will stay that way.</li>
-        <li><strong className="text-foreground">Privacy by Design.</strong> Every calculation runs entirely in your browser. Your grades, your essays, your data — none of it ever touches a server.</li>
-        <li><strong className="text-foreground">Built for Speed.</strong> No bloated frameworks, no unnecessary loading screens. Tools that load instantly and do exactly what they promise.</li>
+        <li><strong className="text-foreground">Genuinely Free.</strong> No hidden tiers, no expiring trials. Core tools are free and will stay that way.</li>
+        <li><strong className="text-foreground">Privacy by Design.</strong> Calculations run entirely in your browser — your essays and grades never touch our servers.</li>
+        <li><strong className="text-foreground">Built for Speed.</strong> No bloated frameworks, no loading screens. Tools that load instantly and just work.</li>
         <li><strong className="text-foreground">Student-First Thinking.</strong> Every feature decision starts with one question: "Would this actually help a student at 2 AM before a deadline?"</li>
       </ul>
 
-      <h2 className="mt-10 font-display text-2xl font-bold text-foreground">What's Coming Next</h2>
+      <h2 className="mt-10 font-display text-2xl font-bold text-foreground">Get In Touch</h2>
       <p>
-        We're continuously adding new tools based on what students actually ask for. Citation formatters, semester tracking dashboards, study planners, and AI-powered career predictions are all on the roadmap.
-      </p>
-      <p>
-        Got an idea for a tool you wish existed? We'd genuinely love to hear about it on our <a href="/contact" className="text-primary hover:underline">Contact page</a>. This platform grows because students like you use it, share it, and tell us what's missing.
+        Got an idea for a tool you wish existed? We'd love to hear from you. Reach us anytime at <a href="mailto:hello@studyhelpertools.com" className="text-primary hover:underline">hello@studyhelpertools.com</a> or through our <a href="/contact" className="text-primary hover:underline">Contact page</a>.
       </p>
       <p className="mt-6 font-medium text-foreground">
         Thanks for being here. Now go ace that exam. 🎓

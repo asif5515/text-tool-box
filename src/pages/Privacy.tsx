@@ -2,58 +2,42 @@ import ToolPageLayout from "@/components/ToolPageLayout";
 
 const Privacy = () => (
   <ToolPageLayout
-    title="Privacy Policy"
-    metaDescription="Read StudyHelperTools' privacy policy. We prioritize your privacy — all core tools run locally in your browser with minimal data collection."
+    title="Privacy Policy | StudyHelperTools"
+    metaDescription="StudyHelperTools privacy policy: we don't store text from our tools, all processing happens in your browser, and we use Google Analytics and AdSense to keep tools free."
   >
     <div className="prose prose-sm max-w-none text-muted-foreground">
       <p className="text-base">
-        <strong className="text-foreground">Last updated:</strong> February 2026
+        <strong className="text-foreground">Last updated:</strong> May 2026
       </p>
 
-      <h2 className="mt-8 font-display text-2xl font-bold text-foreground">The Short Version</h2>
+      <h2 className="mt-8 font-display text-2xl font-bold text-foreground">Your Privacy Matters</h2>
       <p>
-        Your privacy matters to us — genuinely. The core tools on StudyHelperTools (GPA calculators, word counter, case converter) run entirely in your browser. Nothing you type, calculate, or convert in those tools ever leaves your device.
+        At <strong className="text-foreground">StudyHelperTools</strong>, we take your privacy seriously. We want to be clear and upfront about how our site works.
       </p>
 
-      <h2 className="mt-8 font-display text-2xl font-bold text-foreground">What We Collect</h2>
-      <p>If you create an account, we store the following to provide dashboard features:</p>
-      <ul className="space-y-1">
-        <li>Your email address (for authentication)</li>
-        <li>Display name, university, and major (if you choose to provide them)</li>
-        <li>Semester GPA records you manually add to your dashboard</li>
-      </ul>
-      <p>All account data is stored securely and is only accessible to you. We do not sell, share, or monetize your personal information.</p>
-
-      <h2 className="mt-8 font-display text-2xl font-bold text-foreground">What We Don't Collect</h2>
-      <ul className="space-y-1">
-        <li>No text or content entered into browser-based tools (GPA calculator, word counter, etc.)</li>
-        <li>No cookies for tracking individual behavior</li>
-        <li>No fingerprinting or cross-site tracking</li>
-      </ul>
+      <h2 className="mt-8 font-display text-2xl font-bold text-foreground">We Do Not Store Your Text</h2>
+      <p>
+        We <strong className="text-foreground">DO NOT</strong> store or save any text you paste into our tools (like the Word Counter, Case Converter, or Plagiarism Checker). All processing happens locally in your browser. Once you close the tab, the content is gone — we never see it.
+      </p>
 
       <h2 className="mt-8 font-display text-2xl font-bold text-foreground">Analytics</h2>
       <p>
-        We use Google Analytics to understand how visitors find and use our site. This helps us improve the tools and prioritize what to build next. Google Analytics may use cookies — you can learn more about their practices in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google's Privacy Policy</a>.
+        We use <strong className="text-foreground">Google Analytics (G-N30N7KLWD3)</strong> to understand our traffic and improve our services. This helps us know which tools students find most useful and where we should focus our efforts.
       </p>
 
-      <h2 className="mt-8 font-display text-2xl font-bold text-foreground">Third-Party Services</h2>
+      <h2 className="mt-8 font-display text-2xl font-bold text-foreground">Cookies and Advertising</h2>
       <p>
-        We may display advertisements through Google AdSense or similar networks. These services may use their own cookies to serve relevant ads. Any such cookies are governed by the respective provider's privacy policy, not ours.
+        We also use cookies to serve ads via <strong className="text-foreground">Google AdSense</strong> to keep our tools free for students. These cookies may be used by Google and its partners to serve ads based on your prior visits to our site or other sites. You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google's Ads Settings</a>.
       </p>
 
-      <h2 className="mt-8 font-display text-2xl font-bold text-foreground">Data Deletion</h2>
+      <h2 className="mt-8 font-display text-2xl font-bold text-foreground">Account Data</h2>
       <p>
-        If you have an account and want your data deleted, contact us at <a href="mailto:hello@studyhelpertools.com" className="text-primary hover:underline">hello@studyhelpertools.com</a> and we'll handle it promptly.
+        If you create an account, we store your email address and any optional profile details (display name, university, major) and semester records you choose to add. This data is private to you and never sold or shared.
       </p>
 
-      <h2 className="mt-8 font-display text-2xl font-bold text-foreground">Changes to This Policy</h2>
+      <h2 className="mt-8 font-display text-2xl font-bold text-foreground">Contact Us</h2>
       <p>
-        If we make meaningful changes to how we handle data, we'll update this page and the date above. We believe in transparency — no fine print, no surprises.
-      </p>
-
-      <h2 className="mt-8 font-display text-2xl font-bold text-foreground">Questions?</h2>
-      <p>
-        If anything here is unclear, reach out to us at <a href="mailto:hello@studyhelpertools.com" className="text-primary hover:underline">hello@studyhelpertools.com</a>. We're happy to clarify.
+        For any privacy-related queries, contact us at <a href="mailto:hello@studyhelpertools.com" className="text-primary hover:underline">hello@studyhelpertools.com</a>.
       </p>
     </div>
   </ToolPageLayout>
