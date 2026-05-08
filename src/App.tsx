@@ -49,6 +49,7 @@ const App = () => (
             <Route path="/profile" element={<Dashboard />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/gpa-to-percentage-guide" element={<BlogGPAToPercentageGuide />} />
+            <Route path="/blog/how-to-write-1000-word-essay-fast" element={<BlogWriteEssayFast />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <FloatingGPAWidget />
