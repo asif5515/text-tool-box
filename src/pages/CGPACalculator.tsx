@@ -1,8 +1,9 @@
 import ToolPageLayout from "@/components/ToolPageLayout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Trash2, Plus } from "lucide-react";
+import { Trash2, Plus, ArrowRight, BookOpen } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface Semester {
   gpa: string;
@@ -56,10 +57,11 @@ const CGPACalculator = () => {
         "Completely free — no account needed.",
       ]}
       faqs={[
-        { question: "What's the difference between GPA and CGPA?", answer: "Your GPA is the grade point average for a single semester. Your CGPA (Cumulative GPA) is the weighted average of all your semester GPAs, giving you an overall picture of your academic performance across your entire program." },
-        { question: "How do I calculate CGPA manually?", answer: "Multiply each semester's GPA by its credit hours, add all of those up, and then divide by the total credit hours. That gives you the weighted average — your CGPA. This tool does that math for you automatically." },
-        { question: "Does this work for any university grading system?", answer: "This calculator works with the standard 4.0 scale used by most American universities. If your school uses a different scale (like 5.0 or 10.0), you can still use it — just enter your GPAs on whatever scale your institution uses." },
-        { question: "Can I use this for graduate school applications?", answer: "Absolutely. Many grad school applications ask for your cumulative GPA. This tool helps you calculate it quickly so you can fill out applications with confidence." },
+        { question: "What is a good CGPA for Master's applications?", answer: "Most top universities abroad look for a CGPA of 3.0+ on a 4.0 scale (or roughly 7.5+ on a 10-point scale) for Master's programs. Top-tier schools like Ivy Leagues or Oxbridge usually expect 3.5+ (8.0+/10). That said, a strong CGPA isn't everything — research, recommendations, and your statement of purpose carry real weight too." },
+        { question: "How to convert CGPA to GPA?", answer: "If your CGPA is on a 10-point scale, the most common conversion is CGPA × 0.4 = GPA on a 4.0 scale. So a 7.5 CGPA roughly equals a 3.0 GPA. Some universities use their own formulas though — always check the specific school's admissions page for the conversion they accept." },
+        { question: "Is 7.5 CGPA good?", answer: "Yes — a 7.5 CGPA on a 10-point scale is generally considered good and translates to roughly a 3.0 GPA or a First Class with Distinction in many systems. It's a solid score for most Master's applications, including many universities in the US, UK, Canada, and Australia." },
+        { question: "What's the difference between GPA and CGPA?", answer: "GPA is the grade point average for a single semester. CGPA (Cumulative GPA) is the weighted average across all your semesters, giving the overall picture of your academic performance throughout your degree." },
+        { question: "How do I calculate CGPA manually?", answer: "Multiply each semester's GPA by its credit hours, add them all together, and divide by the total credit hours across all semesters. That weighted average is your CGPA — and this tool does the math for you in real time." },
       ]}
     >
       <div className="space-y-6 max-w-lg">
@@ -93,6 +95,40 @@ const CGPACalculator = () => {
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
             Your cumulative GPA tells a bigger story than any single semester can. It's the number that shows up on your transcript, the one grad schools and employers look at first. Keeping tabs on it throughout your degree helps you set realistic goals and course-correct early if needed. We built this tool so you can check in on your progress in seconds — no spreadsheets, no guesswork.
           </p>
+        </div>
+
+        <Link
+          to="/gpa-calculator"
+          className="group flex items-center justify-between gap-4 rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/40 hover:bg-accent"
+        >
+          <div>
+            <p className="font-display text-lg font-semibold text-foreground">
+              Just need this semester's number?
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Calculate your current semester performance with our GPA Calculator.
+            </p>
+          </div>
+          <ArrowRight className="h-5 w-5 shrink-0 text-primary transition-transform group-hover:translate-x-1" />
+        </Link>
+
+        <div className="rounded-xl border border-border bg-card p-5">
+          <div className="flex items-center gap-2">
+            <BookOpen className="h-4 w-4 text-primary" />
+            <h2 className="font-display text-lg font-semibold text-foreground">Recommended Reading</h2>
+          </div>
+          <Link
+            to="/blog/difference-between-gpa-and-cgpa-guide"
+            className="mt-3 block rounded-lg border border-border bg-background p-4 transition-colors hover:border-primary/40"
+          >
+            <p className="text-xs font-medium uppercase tracking-wide text-primary">Academic Guide</p>
+            <p className="mt-1 font-display text-base font-semibold text-foreground">
+              GPA vs CGPA: The Ultimate Guide for International Students
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              A clear, friendly walkthrough of how GPA and CGPA differ, why both matter, and what international admissions teams actually look for.
+            </p>
+          </Link>
         </div>
       </div>
     </ToolPageLayout>
