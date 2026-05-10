@@ -2,8 +2,8 @@ import ToolPageLayout from "@/components/ToolPageLayout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Trash2, Plus, ArrowRight, BookOpen } from "lucide-react";
-import { useState } from "react";
+import { Trash2, Plus, ArrowRight, BookOpen, Lightbulb } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const gradePoints: Record<string, number> = { "A+": 4.0, A: 4.0, "A-": 3.7, "B+": 3.3, B: 3.0, "B-": 2.7, "C+": 2.3, C: 2.0, "C-": 1.7, "D+": 1.3, D: 1.0, "D-": 0.7, F: 0.0 };
@@ -16,6 +16,10 @@ const emptySemester = (n: number): Semester => ({ name: `Semester ${n}`, courses
 
 const GPACalculator = () => {
   const [semesters, setSemesters] = useState<Semester[]>([emptySemester(1)]);
+
+  useEffect(() => {
+    document.title = "Free GPA & SGPA Calculator | Calculate Semester Grades Online";
+  }, []);
 
   const updateCourse = (si: number, ci: number, field: keyof Course, value: string) => {
     const updated = [...semesters];
@@ -56,8 +60,8 @@ const GPACalculator = () => {
 
   return (
     <ToolPageLayout
-      title="Free GPA Calculator — 4.0 Scale with Multi-Semester Support"
-      metaDescription="Calculate your college GPA on a 4.0 scale instantly. Add multiple semesters, track cumulative GPA, and export results as PDF — 100% free, no sign-up."
+      title="GPA / SGPA Calculator"
+      metaDescription="Free GPA & SGPA Calculator | Calculate Semester Grades Online. Add multiple semesters, track cumulative GPA, and export results as PDF — 100% free, no sign-up."
       howToUse={["Select a letter grade for each course.", "Enter the credit hours.", "Add more courses or semesters as needed.", "View your semester and cumulative GPA instantly.", "Click 'Save as PDF' to download your results."]}
       benefits={["Supports 4.0 scale grading system used by US universities.", "Multi-semester tracking for cumulative GPA.", "No sign-up required — completely free.", "Export to PDF for your records."]}
       faqs={[
@@ -107,6 +111,16 @@ const GPACalculator = () => {
         <div className="rounded-xl border border-primary/20 bg-accent p-6 text-center">
           <p className="text-sm font-medium text-muted-foreground">Cumulative GPA</p>
           <p className="font-display text-4xl font-bold text-primary">{cumulativeGPA.toFixed(2)}</p>
+        </div>
+
+        <div className="flex items-start gap-3 rounded-xl border border-dashed border-primary/40 bg-card p-5">
+          <Lightbulb className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+          <div>
+            <p className="font-display text-sm font-semibold uppercase tracking-wide text-primary">Pro Tip</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Did you know? In many regions, GPA is also referred to as <strong className="text-foreground">SGPA</strong> (Semester Grade Point Average). Whether your university uses GPA or SGPA, this tool works perfectly for both!
+            </p>
+          </div>
         </div>
 
         <Link
