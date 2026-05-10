@@ -22,6 +22,7 @@ import Dashboard from "@/pages/Dashboard";
 import BlogGPAToPercentageGuide from "./pages/BlogGPAToPercentageGuide";
 import BlogWriteEssayFast from "./pages/BlogWriteEssayFast";
 import BlogGpaVsCgpa from "./pages/BlogGpaVsCgpa";
+import BlogSgpaToCgpa from "./pages/BlogSgpaToCgpa";
 import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
