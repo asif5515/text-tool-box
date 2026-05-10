@@ -6,6 +6,15 @@ import { useEffect } from "react";
 
 const posts = [
   {
+    slug: "/blog/difference-between-gpa-and-cgpa-guide",
+    title: "GPA vs. CGPA: The Ultimate Guide for International Students (2026)",
+    excerpt:
+      "Confused between GPA and CGPA? Learn the key differences, how to calculate them, and why they matter for your university applications abroad.",
+    date: "May 10, 2026",
+    readTime: "6 min read",
+    category: "Academic Guides",
+  },
+  {
     slug: "/blog/how-to-write-1000-word-essay-fast",
     title: "How to Write a 1,000-Word Essay in 2 Hours: A Student's Survival Guide",
     excerpt:

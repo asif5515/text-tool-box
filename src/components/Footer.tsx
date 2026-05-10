@@ -36,11 +36,19 @@ const Footer = () => (
             <li><Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
             <li><Link to="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</Link></li>
             <li><Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
+            <li>
+              <a href="mailto:hello@studyhelpertools.com" className="hover:text-foreground transition-colors">
+                hello@studyhelpertools.com
+              </a>
+            </li>
           </ul>
         </div>
       </div>
       <div className="mt-10 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} StudyHelperTools. All rights reserved.
+        © {new Date().getFullYear()} StudyHelperTools. All rights reserved. · Contact:{" "}
+        <a href="mailto:hello@studyhelpertools.com" className="hover:text-foreground transition-colors">
+          hello@studyhelpertools.com
+        </a>
       </div>
     </div>
   </footer>
