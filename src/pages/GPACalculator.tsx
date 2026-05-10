@@ -17,6 +17,10 @@ const emptySemester = (n: number): Semester => ({ name: `Semester ${n}`, courses
 const GPACalculator = () => {
   const [semesters, setSemesters] = useState<Semester[]>([emptySemester(1)]);
 
+  useEffect(() => {
+    document.title = "Free GPA & SGPA Calculator | Calculate Semester Grades Online";
+  }, []);
+
   const updateCourse = (si: number, ci: number, field: keyof Course, value: string) => {
     const updated = [...semesters];
     updated[si].courses[ci] = { ...updated[si].courses[ci], [field]: value };
