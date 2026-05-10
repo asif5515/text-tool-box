@@ -113,6 +113,16 @@ const GPACalculator = () => {
           <p className="font-display text-4xl font-bold text-primary">{cumulativeGPA.toFixed(2)}</p>
         </div>
 
+        <div className="flex items-start gap-3 rounded-xl border border-dashed border-primary/40 bg-card p-5">
+          <Lightbulb className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+          <div>
+            <p className="font-display text-sm font-semibold uppercase tracking-wide text-primary">Pro Tip</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Did you know? In many regions, GPA is also referred to as <strong className="text-foreground">SGPA</strong> (Semester Grade Point Average). Whether your university uses GPA or SGPA, this tool works perfectly for both!
+            </p>
+          </div>
+        </div>
+
         <Link
           to="/cgpa-calculator"
           className="group flex items-center justify-between gap-4 rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/40 hover:bg-accent"
