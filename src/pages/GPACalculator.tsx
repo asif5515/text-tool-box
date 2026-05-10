@@ -56,8 +56,8 @@ const GPACalculator = () => {
 
   return (
     <ToolPageLayout
-      title="Free GPA Calculator — 4.0 Scale with Multi-Semester Support"
-      metaDescription="Calculate your college GPA on a 4.0 scale instantly. Add multiple semesters, track cumulative GPA, and export results as PDF — 100% free, no sign-up."
+      title="GPA / SGPA Calculator"
+      metaDescription="Free GPA & SGPA Calculator | Calculate Semester Grades Online. Add multiple semesters, track cumulative GPA, and export results as PDF — 100% free, no sign-up."
       howToUse={["Select a letter grade for each course.", "Enter the credit hours.", "Add more courses or semesters as needed.", "View your semester and cumulative GPA instantly.", "Click 'Save as PDF' to download your results."]}
       benefits={["Supports 4.0 scale grading system used by US universities.", "Multi-semester tracking for cumulative GPA.", "No sign-up required — completely free.", "Export to PDF for your records."]}
       faqs={[
