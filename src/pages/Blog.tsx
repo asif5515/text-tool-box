@@ -6,6 +6,15 @@ import { useEffect } from "react";
 
 const posts = [
   {
+    slug: "/blog/how-to-convert-sgpa-to-cgpa",
+    title: "How to Convert SGPA to CGPA: A Step-by-Step Calculation Guide",
+    excerpt:
+      "The SGPA to CGPA formula explained in plain English, with a worked example so you can roll up every semester into one final number with confidence.",
+    date: "May 10, 2026",
+    readTime: "4 min read",
+    category: "Academic Guides",
+  },
+  {
     slug: "/blog/difference-between-gpa-and-cgpa-guide",
     title: "GPA vs. CGPA: The Ultimate Guide for International Students (2026)",
     excerpt:
