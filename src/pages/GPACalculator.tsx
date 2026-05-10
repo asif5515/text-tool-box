@@ -108,6 +108,40 @@ const GPACalculator = () => {
           <p className="text-sm font-medium text-muted-foreground">Cumulative GPA</p>
           <p className="font-display text-4xl font-bold text-primary">{cumulativeGPA.toFixed(2)}</p>
         </div>
+
+        <Link
+          to="/cgpa-calculator"
+          className="group flex items-center justify-between gap-4 rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/40 hover:bg-accent"
+        >
+          <div>
+            <p className="font-display text-lg font-semibold text-foreground">
+              Need to calculate your overall course result?
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Try our CGPA Calculator to weigh every semester into one final number.
+            </p>
+          </div>
+          <ArrowRight className="h-5 w-5 shrink-0 text-primary transition-transform group-hover:translate-x-1" />
+        </Link>
+
+        <div className="rounded-xl border border-border bg-card p-5">
+          <div className="flex items-center gap-2">
+            <BookOpen className="h-4 w-4 text-primary" />
+            <h2 className="font-display text-lg font-semibold text-foreground">Recommended Reading</h2>
+          </div>
+          <Link
+            to="/blog/difference-between-gpa-and-cgpa-guide"
+            className="mt-3 block rounded-lg border border-border bg-background p-4 transition-colors hover:border-primary/40"
+          >
+            <p className="text-xs font-medium uppercase tracking-wide text-primary">Academic Guide</p>
+            <p className="mt-1 font-display text-base font-semibold text-foreground">
+              GPA vs CGPA: The Ultimate Guide for International Students
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Confused about how a single semester's GPA rolls into your final CGPA? This guide breaks it down for students applying abroad.
+            </p>
+          </Link>
+        </div>
       </div>
     </ToolPageLayout>
   );
