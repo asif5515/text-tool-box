@@ -53,6 +53,7 @@ const App = () => (
             <Route path="/blog/gpa-to-percentage-guide" element={<BlogGPAToPercentageGuide />} />
             <Route path="/blog/how-to-write-1000-word-essay-fast" element={<BlogWriteEssayFast />} />
             <Route path="/blog/difference-between-gpa-and-cgpa-guide" element={<BlogGpaVsCgpa />} />
+            <Route path="/blog/how-to-convert-sgpa-to-cgpa" element={<BlogSgpaToCgpa />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <FloatingGPAWidget />
