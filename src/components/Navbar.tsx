@@ -27,6 +27,7 @@ const Navbar = () => {
             <Link to="/case-converter" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Case Converter</Link>
             <Link to="/word-counter" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Word Counter</Link>
             <Link to="/gpa-to-percentage" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">GPA to %</Link>
+            <Link to="/plagiarism-checker" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Plagiarism</Link>
             <Link to="/blog" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Blog</Link>
             <ThemeToggle />
             {!loading && (
