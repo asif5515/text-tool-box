@@ -11,9 +11,11 @@ interface ToolPageLayoutProps {
   howToUse?: string[];
   benefits?: string[];
   faqs?: { question: string; answer: string }[];
+  h1?: string;
+  intro?: string;
 }
 
-const ToolPageLayout = ({ title, metaDescription, children, howToUse, benefits, faqs }: ToolPageLayoutProps) => {
+const ToolPageLayout = ({ title, metaDescription, children, howToUse, benefits, faqs, h1, intro }: ToolPageLayoutProps) => {
   useEffect(() => {
     document.title = `${title} | StudyHelperTools`;
     const meta = document.querySelector('meta[name="description"]');
@@ -31,8 +33,8 @@ const ToolPageLayout = ({ title, metaDescription, children, howToUse, benefits, 
       <Navbar />
       <main className="flex-1">
         <div className="container py-8 md:py-12">
-          <h1 className="font-display text-3xl font-bold text-foreground md:text-4xl">{title}</h1>
-          <p className="mt-2 text-muted-foreground max-w-2xl">{metaDescription}</p>
+          <h1 className="font-display text-3xl font-bold text-foreground md:text-4xl">{h1 ?? title}</h1>
+          <p className="mt-2 text-muted-foreground max-w-2xl">{intro ?? metaDescription}</p>
 
           <AdPlaceholder className="mt-6" />
 
