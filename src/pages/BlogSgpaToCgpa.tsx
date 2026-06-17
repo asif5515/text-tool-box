@@ -137,7 +137,7 @@ const BlogSgpaToCgpa = () => {
             </ul>
 
             <p>
-              Other than that, the math is genuinely this simple — even if the acronyms make it sound scarier than it is.
+              Other than that, the math is genuinely this simple — even if the acronyms make it sound scarier than it is. Once you have your CGPA, you may also need to translate it to a percentage for scholarships, visa forms, or international applications — our <Link to="/gpa-to-percentage" className="text-primary underline underline-offset-2 hover:text-primary/80">GPA to Percentage Converter</Link> handles that in a single click.
             </p>
 
             <div className="my-10 rounded-2xl border border-primary/40 bg-gradient-to-br from-primary/15 via-accent/30 to-transparent p-6 md:p-8 text-center">
