@@ -170,7 +170,7 @@ const BlogGpaVsCgpa = () => {
               Honestly? Both. Your <strong className="text-foreground">CGPA</strong> is what universities and employers look at first — it's the headline number on your transcript. But a strong upward GPA trend across recent semesters can offset a rocky start, especially if you can show growth in your statement of purpose.
             </p>
             <p>
-              The takeaway: don't obsess over one bad semester, but don't slack off either. Every term feeds into the bigger picture.
+              The takeaway: don't obsess over one bad semester, but don't slack off either. Every term feeds into the bigger picture. And if your target university asks for a percentage instead of a GPA, our <Link to="/gpa-to-percentage" className="text-primary underline underline-offset-2 hover:text-primary/80">GPA to Percentage Converter</Link> gives you the exact number using the standard 4.0 scale formula.
             </p>
 
             <div className="my-8 rounded-xl border border-dashed border-primary/40 bg-card p-6 text-center">
