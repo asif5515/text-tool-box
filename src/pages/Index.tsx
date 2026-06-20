@@ -11,15 +11,103 @@ import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 
 const academicTools = [
-  { title: "GPA Calculator", desc: "Enter your grades and credit hours — this tool handles the math, semester by semester, on a standard 4.0 scale. No sign-ups, no nonsense.", icon: Calculator, path: "/gpa-calculator" },
-  { title: "Study Planner", desc: "Generate a personalized weekly study schedule based on your subjects and exam dates. Stay organized and reduce stress.", icon: Calendar, path: "/study-schedule-maker" },
-  { title: "Pomodoro Timer", desc: "Boost your focus with the 25/5 technique. Scientifically proven to help students maintain concentration during long study sessions.", icon: Clock, path: "/pomodoro-timer" },
+  { 
+    title: "GPA Calculator", 
+    desc: "Enter your grades and credit hours — this tool handles the math, semester by semester, on a standard 4.0 scale.", 
+    icon: Calculator, 
+    path: "/gpa-calculator",
+    related: [
+      { name: "CGPA Calculator", path: "/cgpa-calculator" },
+      { name: "Grade to GPA", path: "/letter-grade-to-gpa-converter" }
+    ]
+  },
+  { 
+    title: "CGPA Calculator", 
+    desc: "Calculate your cumulative GPA across multiple semesters. Enter each semester's GPA and credit hours to get your overall standing.", 
+    icon: Calculator, 
+    path: "/cgpa-calculator",
+    related: [
+      { name: "GPA Calculator", path: "/gpa-calculator" },
+      { name: "GPA to %", path: "/gpa-to-percentage" }
+    ]
+  },
+  { 
+    title: "Study Planner", 
+    desc: "Generate a personalized weekly study schedule based on your subjects and exam dates. Stay organized and reduce stress.", 
+    icon: Calendar, 
+    path: "/study-schedule-maker",
+    related: [
+      { name: "GPA Calculator", path: "/gpa-calculator" }
+    ]
+  },
+  { 
+    title: "Grade to GPA", 
+    desc: "Convert your letter grades (A, B, C, etc.) to the standard 4.0 GPA scale instantly. Weighted for accuracy.", 
+    icon: Calculator, 
+    path: "/letter-grade-to-gpa-converter",
+    related: [
+      { name: "GPA Calculator", path: "/gpa-calculator" },
+      { name: "GPA to %", path: "/gpa-to-percentage" }
+    ]
+  },
+  { 
+    title: "GPA to %", 
+    desc: "Convert your GPA to percentage instantly on the 4.0 scale. See global conversion standards and formulas.", 
+    icon: Percent, 
+    path: "/gpa-to-percentage",
+    related: [
+      { name: "CGPA Calculator", path: "/cgpa-calculator" },
+      { name: "Grade to GPA", path: "/letter-grade-to-gpa-converter" }
+    ]
+  },
+  { 
+    title: "Pomodoro Timer", 
+    desc: "Boost your focus with the 25/5 technique. Scientifically proven to help students maintain concentration.", 
+    icon: Clock, 
+    path: "/pomodoro-timer" 
+  },
 ];
 
 const writingTools = [
-  { title: "Outline Generator", desc: "Stop staring at a blank page. Generate a structured essay outline for any topic instantly. Perfect for argumentative and narrative essays.", icon: Layout, path: "/essay-outline-generator" },
-  { title: "Word Counter", desc: "Paste any text and instantly see word count, character count, sentence count, and estimated reading time. Clean and distraction-free.", icon: FileText, path: "/word-counter" },
-  { title: "Case Converter", desc: "Switch between UPPERCASE, lowercase, and Title Case in one click. Perfect for fixing formatting without retyping a single word.", icon: Type, path: "/case-converter" },
+  { 
+    title: "Outline Generator", 
+    desc: "Stop staring at a blank page. Generate a structured essay outline for any topic instantly.", 
+    icon: Layout, 
+    path: "/essay-outline-generator",
+    related: [
+      { name: "Word Counter", path: "/word-counter" },
+      { name: "Plagiarism Checker", path: "/plagiarism-checker" }
+    ]
+  },
+  { 
+    title: "Word Counter", 
+    desc: "Paste any text and instantly see word count, character count, sentence count, and estimated reading time.", 
+    icon: FileText, 
+    path: "/word-counter",
+    related: [
+      { name: "Outline Generator", path: "/essay-outline-generator" },
+      { name: "Case Converter", path: "/case-converter" }
+    ]
+  },
+  { 
+    title: "Case Converter", 
+    desc: "Switch between UPPERCASE, lowercase, and Title Case in one click. Perfect for fixing formatting.", 
+    icon: Type, 
+    path: "/case-converter",
+    related: [
+      { name: "Word Counter", path: "/word-counter" }
+    ]
+  },
+  { 
+    title: "Plagiarism Checker", 
+    desc: "A quick originality sanity-check before you submit. Paste your essay and run a basic scan.", 
+    icon: ShieldCheck, 
+    path: "/plagiarism-checker",
+    related: [
+      { name: "Outline Generator", path: "/essay-outline-generator" },
+      { name: "Word Counter", path: "/word-counter" }
+    ]
+  },
 ];
 
 const testimonials = [
@@ -44,18 +132,38 @@ const Index = () => {
     }
   }, []);
 
-  const renderToolGrid = (tools: typeof academicTools) => (
+  const renderToolGrid = (tools: any[]) => (
     <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {tools.map((tool, i) => (
         <motion.div key={tool.path} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
-          <Link to={tool.path} className="tool-card group block rounded-xl border border-border bg-card p-6">
-            <tool.icon className="h-8 w-8 text-primary" />
-            <h3 className="mt-4 font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors">{tool.title}</h3>
-            <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{tool.desc}</p>
-            <span className="mt-4 inline-flex items-center text-sm font-medium text-primary">
+          <div className="tool-card group flex flex-col h-full rounded-xl border border-border bg-card p-6">
+            <Link to={tool.path} className="flex-1">
+              <tool.icon className="h-8 w-8 text-primary" />
+              <h3 className="mt-4 font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors">{tool.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{tool.desc}</p>
+            </Link>
+            
+            {tool.related && tool.related.length > 0 && (
+              <div className="mt-4 pt-4 border-t border-border/50">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-1.5">Often used with:</p>
+                <div className="flex flex-wrap gap-x-3 gap-y-1">
+                  {tool.related.map((rel: any) => (
+                    <Link 
+                      key={rel.path} 
+                      to={rel.path} 
+                      className="text-xs font-medium text-primary hover:underline"
+                    >
+                      {rel.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <Link to={tool.path} className="mt-4 inline-flex items-center text-sm font-medium text-primary">
               Open tool <ArrowRight className="ml-1 h-3.5 w-3.5" />
-            </span>
-          </Link>
+            </Link>
+          </div>
         </motion.div>
       ))}
     </div>
