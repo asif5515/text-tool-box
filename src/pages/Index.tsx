@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import AdPlaceholder from "@/components/AdPlaceholder";
 import HomeFAQ from "@/components/HomeFAQ";
 import LatestBlogPosts from "@/components/LatestBlogPosts";
+import TrustBadges from "@/components/TrustBadges";
 import heroImage from "@/assets/hero-illustration.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -288,6 +289,8 @@ const Index = () => {
           </p>
         </div>
       </section>
+
+      <TrustBadges />
 
       <LatestBlogPosts />
 
