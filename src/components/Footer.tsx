@@ -17,6 +17,7 @@ const Footer = () => (
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
             <li><Link to="/gpa-calculator" className="hover:text-foreground transition-colors">GPA Calculator</Link></li>
             <li><Link to="/cgpa-calculator" className="hover:text-foreground transition-colors">CGPA Calculator</Link></li>
+            <li><Link to="/letter-grade-to-gpa-converter" className="hover:text-foreground transition-colors">Grade to GPA Converter</Link></li>
             <li><Link to="/study-schedule-maker" className="hover:text-foreground transition-colors">Study Planner</Link></li>
             <li><Link to="/gpa-to-percentage" className="hover:text-foreground transition-colors">GPA to Percentage</Link></li>
           </ul>

@@ -16,6 +16,7 @@ import GPAToPercentage from "./pages/GPAToPercentage";
 import PlagiarismChecker from "./pages/PlagiarismChecker";
 import EssayOutlineGenerator from "./pages/EssayOutlineGenerator";
 import StudyScheduleMaker from "./pages/StudyScheduleMaker";
+import LetterGradeToGPAConverter from "./pages/LetterGradeToGPAConverter";
 import About from "./pages/About";
 import Privacy from "./pages/Privacy";
 import TermsOfService from "./pages/TermsOfService";
@@ -47,6 +48,7 @@ const App = () => (
             <Route path="/plagiarism-checker" element={<PlagiarismChecker />} />
             <Route path="/essay-outline-generator" element={<EssayOutlineGenerator />} />
             <Route path="/study-schedule-maker" element={<StudyScheduleMaker />} />
+            <Route path="/letter-grade-to-gpa-converter" element={<LetterGradeToGPAConverter />} />
             <Route path="/about" element={<About />} />
             <Route path="/privacy-policy" element={<Privacy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />

@@ -113,30 +113,36 @@ const GPACalculator = () => {
           <p className="font-display text-4xl font-bold text-primary">{cumulativeGPA.toFixed(2)}</p>
         </div>
 
-        <div className="flex items-start gap-3 rounded-xl border border-dashed border-primary/40 bg-card p-5">
-          <Lightbulb className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-          <div>
-            <p className="font-display text-sm font-semibold uppercase tracking-wide text-primary">Pro Tip</p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Did you know? In many regions, GPA is also referred to as <strong className="text-foreground">SGPA</strong> (Semester Grade Point Average). Whether your university uses GPA or SGPA, this tool works perfectly for both!
-            </p>
-          </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <Link
+            to="/letter-grade-to-gpa-converter"
+            className="group flex items-center justify-between gap-4 rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/40 hover:bg-accent"
+          >
+            <div>
+              <p className="font-display text-lg font-semibold text-foreground">
+                Need to convert letter grades?
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Use our dedicated Letter Grade to GPA Converter for a detailed breakdown.
+              </p>
+            </div>
+            <ArrowRight className="h-5 w-5 shrink-0 text-primary transition-transform group-hover:translate-x-1" />
+          </Link>
+          <Link
+            to="/cgpa-calculator"
+            className="group flex items-center justify-between gap-4 rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/40 hover:bg-accent"
+          >
+            <div>
+              <p className="font-display text-lg font-semibold text-foreground">
+                Calculate overall course result?
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Try our CGPA Calculator to weigh every semester into one final number.
+              </p>
+            </div>
+            <ArrowRight className="h-5 w-5 shrink-0 text-primary transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
-
-        <Link
-          to="/cgpa-calculator"
-          className="group flex items-center justify-between gap-4 rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/40 hover:bg-accent"
-        >
-          <div>
-            <p className="font-display text-lg font-semibold text-foreground">
-              Need to calculate your overall course result?
-            </p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Try our CGPA Calculator to weigh every semester into one final number.
-            </p>
-          </div>
-          <ArrowRight className="h-5 w-5 shrink-0 text-primary transition-transform group-hover:translate-x-1" />
-        </Link>
 
         <div className="rounded-xl border border-border bg-card p-5">
           <div className="flex items-center gap-2">
