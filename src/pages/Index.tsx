@@ -4,7 +4,7 @@ import AdPlaceholder from "@/components/AdPlaceholder";
 import heroImage from "@/assets/hero-illustration.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Calculator, Type, FileText, Percent, ShieldCheck, Star, ArrowRight, BarChart3 } from "lucide-react";
+import { Calculator, Type, FileText, Percent, ShieldCheck, Star, ArrowRight, BarChart3, Layout } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 
@@ -15,9 +15,9 @@ const academicTools = [
 ];
 
 const writingTools = [
+  { title: "Outline Generator", desc: "Stop staring at a blank page. Generate a structured essay outline for any topic instantly. Perfect for argumentative and narrative essays.", icon: Layout, path: "/essay-outline-generator" },
   { title: "Word Counter", desc: "Paste any text and instantly see word count, character count, sentence count, and estimated reading time. Clean and distraction-free.", icon: FileText, path: "/word-counter" },
   { title: "Case Converter", desc: "Switch between UPPERCASE, lowercase, and Title Case in one click. Perfect for fixing formatting without retyping a single word.", icon: Type, path: "/case-converter" },
-  { title: "Plagiarism Checker", desc: "Run a quick originality check on your essay before you hit submit. Deep scan with source matching is on the roadmap.", icon: ShieldCheck, path: "/plagiarism-checker" },
 ];
 
 const testimonials = [

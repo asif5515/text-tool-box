@@ -24,7 +24,7 @@ const Navbar = () => {
           <div className="hidden items-center gap-5 md:flex">
             <Link to="/gpa-calculator" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">GPA Calculator</Link>
             <Link to="/cgpa-calculator" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">CGPA</Link>
-            <Link to="/case-converter" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Case Converter</Link>
+            <Link to="/essay-outline-generator" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Outline Gen</Link>
             <Link to="/word-counter" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Word Counter</Link>
             <Link to="/gpa-to-percentage" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">GPA to %</Link>
             <Link to="/plagiarism-checker" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Plagiarism</Link>
@@ -55,7 +55,7 @@ const Navbar = () => {
             <div className="flex flex-col gap-3">
               <Link to="/gpa-calculator" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">GPA Calculator</Link>
               <Link to="/cgpa-calculator" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">CGPA Calculator</Link>
-              <Link to="/case-converter" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">Case Converter</Link>
+              <Link to="/essay-outline-generator" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">Outline Generator</Link>
               <Link to="/word-counter" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">Word Counter</Link>
               <Link to="/gpa-to-percentage" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">GPA to %</Link>
               <Link to="/plagiarism-checker" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">Plagiarism Checker</Link>

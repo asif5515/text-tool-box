@@ -23,8 +23,9 @@ const Footer = () => (
         <div>
           <h4 className="font-display text-sm font-semibold text-foreground">Writing Tools</h4>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/case-converter" className="hover:text-foreground transition-colors">Case Converter</Link></li>
+            <li><Link to="/essay-outline-generator" className="hover:text-foreground transition-colors">Outline Generator</Link></li>
             <li><Link to="/word-counter" className="hover:text-foreground transition-colors">Word Counter</Link></li>
+            <li><Link to="/case-converter" className="hover:text-foreground transition-colors">Case Converter</Link></li>
             <li><Link to="/plagiarism-checker" className="hover:text-foreground transition-colors">Plagiarism Checker</Link></li>
           </ul>
         </div>
