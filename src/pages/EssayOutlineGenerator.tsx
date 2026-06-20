@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
 import CopyButton from "@/components/CopyButton";
-import { PenTool, ListChecks, Sparkles, FileText, ArrowRight } from "lucide-react";
+import { PenTool, ListChecks, Sparkles, FileText, ArrowRight, Calendar } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -148,19 +148,19 @@ const EssayOutlineGenerator = () => {
         )}
 
         <div className="grid gap-4 md:grid-cols-2">
+          <Link to="/study-schedule-maker" className="group rounded-xl border border-border bg-card p-5 hover:border-primary/40 transition-colors">
+            <h3 className="font-display text-base font-semibold text-foreground flex items-center gap-2">
+              <Calendar className="h-4 w-4 text-primary" /> Plan your study time
+            </h3>
+            <p className="mt-1 text-xs text-muted-foreground">Use our Study Schedule Maker to organize your week and ace your exams.</p>
+            <span className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-primary group-hover:gap-2 transition-all">Open Study Planner <ArrowRight className="h-3 w-3" /></span>
+          </Link>
           <Link to="/word-counter" className="group rounded-xl border border-border bg-card p-5 hover:border-primary/40 transition-colors">
             <h3 className="font-display text-base font-semibold text-foreground flex items-center gap-2">
               <FileText className="h-4 w-4 text-primary" /> Track your length
             </h3>
             <p className="mt-1 text-xs text-muted-foreground">Use our Word Counter to stay within your assignment limit.</p>
             <span className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-primary group-hover:gap-2 transition-all">Open Word Counter <ArrowRight className="h-3 w-3" /></span>
-          </Link>
-          <Link to="/plagiarism-checker" className="group rounded-xl border border-border bg-card p-5 hover:border-primary/40 transition-colors">
-            <h3 className="font-display text-base font-semibold text-foreground flex items-center gap-2">
-              <PenTool className="h-4 w-4 text-primary" /> Check originality
-            </h3>
-            <p className="mt-1 text-xs text-muted-foreground">Run a quick scan before you submit your final draft.</p>
-            <span className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-primary group-hover:gap-2 transition-all">Open Plagiarism Checker <ArrowRight className="h-3 w-3" /></span>
           </Link>
         </div>
       </div>
