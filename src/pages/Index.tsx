@@ -1,17 +1,18 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AdPlaceholder from "@/components/AdPlaceholder";
+import HomeFAQ from "@/components/HomeFAQ";
 import heroImage from "@/assets/hero-illustration.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Calculator, Type, FileText, Percent, ShieldCheck, Star, ArrowRight, BarChart3, Layout, Calendar } from "lucide-react";
+import { Calculator, Type, FileText, Percent, ShieldCheck, Star, ArrowRight, BarChart3, Layout, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 
 const academicTools = [
   { title: "GPA Calculator", desc: "Enter your grades and credit hours — this tool handles the math, semester by semester, on a standard 4.0 scale. No sign-ups, no nonsense.", icon: Calculator, path: "/gpa-calculator" },
   { title: "Study Planner", desc: "Generate a personalized weekly study schedule based on your subjects and exam dates. Stay organized and reduce stress.", icon: Calendar, path: "/study-schedule-maker" },
-  { title: "CGPA Calculator", desc: "Already have your semester GPAs? Plug them in and get your cumulative GPA across your entire academic career in seconds.", icon: BarChart3, path: "/cgpa-calculator" },
+  { title: "Pomodoro Timer", desc: "Boost your focus with the 25/5 technique. Scientifically proven to help students maintain concentration during long study sessions.", icon: Clock, path: "/pomodoro-timer" },
 ];
 
 const writingTools = [
@@ -178,6 +179,8 @@ const Index = () => {
           </p>
         </div>
       </section>
+
+      <HomeFAQ />
 
       <AdPlaceholder className="container my-8" />
 

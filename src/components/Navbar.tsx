@@ -16,19 +16,18 @@ const Navbar = () => {
       <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg">
         <div className="container flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold text-foreground">
-            <GraduationCap className="h-6 w-6 text-primary" />
+            < GraduationCap className="h-6 w-6 text-primary" />
             StudyHelperTools
           </Link>
 
           {/* Desktop */}
           <div className="hidden items-center gap-5 md:flex">
-            <Link to="/gpa-calculator" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">GPA Calculator</Link>
+            <Link to="/gpa-calculator" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">GPA</Link>
             <Link to="/cgpa-calculator" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">CGPA</Link>
-            <Link to="/letter-grade-to-gpa-converter" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Grade to GPA</Link>
             <Link to="/study-schedule-maker" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Planner</Link>
-            <Link to="/essay-outline-generator" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Outline Gen</Link>
-            <Link to="/word-counter" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Word Counter</Link>
-            <Link to="/gpa-to-percentage" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">GPA to %</Link>
+            <Link to="/pomodoro-timer" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Timer</Link>
+            <Link to="/essay-outline-generator" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Outline</Link>
+            <Link to="/word-counter" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Word Count</Link>
             <Link to="/blog" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Blog</Link>
             <ThemeToggle />
             {!loading && (
@@ -37,7 +36,7 @@ const Navbar = () => {
                   <UserCircle className="h-5 w-5" /> Dashboard
                 </Link>
               ) : (
-                <Button variant="outline" size="sm" onClick={() => setAuthOpen(true)}>Login / Sign Up</Button>
+                <Button variant="outline" size="sm" onClick={() => setAuthOpen(true)}>Login</Button>
               )
             )}
           </div>
@@ -56,11 +55,10 @@ const Navbar = () => {
             <div className="flex flex-col gap-3">
               <Link to="/gpa-calculator" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">GPA Calculator</Link>
               <Link to="/cgpa-calculator" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">CGPA Calculator</Link>
-              <Link to="/letter-grade-to-gpa-converter" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">Grade to GPA</Link>
               <Link to="/study-schedule-maker" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">Study Planner</Link>
+              <Link to="/pomodoro-timer" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">Pomodoro Timer</Link>
               <Link to="/essay-outline-generator" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">Outline Generator</Link>
               <Link to="/word-counter" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">Word Counter</Link>
-              <Link to="/gpa-to-percentage" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">GPA to %</Link>
               <Link to="/blog" onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground">Blog</Link>
               {!loading && (
                 user ? (
